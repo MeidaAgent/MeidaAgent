@@ -1,10 +1,10 @@
 <div align="center">
-  <img src="./public/icon.jpg" alt="Meida Logo" width="120" />
+  <img src="./public/meidalogo-removebg.png" alt="Meida Logo" width="100" />
   <h1>Meida Agent Router</h1>
-  <p><strong>The Intelligence Routing Layer for Web3 Workflows</strong></p>
+  <p><strong>The Intelligence Routing Layer for Web3 & Agentic Workflows</strong></p>
 
   <p>
-    <a href="https://github.com/xypherar"><img src="https://img.shields.io/badge/Maintained%20by-Xypherar-blueviolet?style=for-the-badge" alt="Maintained by Xypherar" /></a>
+    <a href="https://github.com/MeidaAgent"><img src="https://img.shields.io/badge/Maintained%20by-Meida%20Agent-111111?style=for-the-badge&logo=github" alt="Maintained by Meida Agent" /></a>
     <img src="https://img.shields.io/badge/Version-2.0.0-neon?style=for-the-badge&color=ccff00" alt="Version 2.0.0" />
     <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License MIT" />
   </p>
@@ -16,10 +16,10 @@
 
 Meida is an ultra-low latency, intent-based AI routing protocol designed to eliminate API waste and maximize execution speed for on-chain and off-chain autonomous agents. 
 
-Built for high-frequency Web3 applications, Discord bots, and Telegram integrations, Meida intercepts user prompts and instantly routes them to the most cost-effective and capable language model (Llama-3, GPT-4o, Claude 3.5) based on real-time intent analysis.
+Built for high-frequency Web3 applications, Discord bots, and Telegram integrations, Meida intercepts user prompts and instantly routes them to the most cost-effective and capable language model (Llama-3, GPT-4o, Claude 3.5, DeepSeek) based on real-time intent analysis.
 
 > **⚠️ NOTE: Core Engine is Proprietary**
-> The repository contains the **Open Source Frontend UI** and documentation portal. The underlying **Core Routing Engine** (including the proprietary intent-analysis algorithms and LPU inferences) is closed-source and maintained privately by the Xypherar team. 
+> The repository contains the **Open Source Frontend UI** and documentation portal. The underlying **Core Routing Engine** (including the proprietary intent-analysis algorithms and LPU inferences) is closed-source and maintained privately by the Meida Protocol team. 
 > Developers can interface with the routing engine exclusively via the Meida Cloud API or the Edge Gateway SDK.
 
 ---
@@ -102,5 +102,5 @@ Navigate to `http://localhost:3000` to view the UI.
 ---
 
 <div align="center">
-  <i>Engineered with absolute precision by the Xypherar Team.</i>
+  <i>Engineered for sub-50ms high-throughput agentic workloads by the Meida Core Team.</i>
 </div>
