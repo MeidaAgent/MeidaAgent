@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-size: 100%; 
+  }
+  @media (min-width: 768px) {
+    html {
+      font-size: 90%; 
+    }
+  }
+}
+
+/* Injected Docs Styling */
+.docs-injected .doc-p {
+  @apply text-lg text-neutral-300 leading-relaxed mb-4;
+}
+.docs-injected .doc-h2 {
+  @apply text-2xl font-semibold text-white mb-4 mt-12 flex items-center;
+}
+.docs-injected .doc-ul {
+  @apply space-y-3 mt-4 mb-8;
+}
+.docs-injected .doc-li {
+  @apply flex items-center gap-3;
+}
+.docs-injected .doc-li::before {
+  content: "";
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #ccff00;
+  border-radius: 1px;
+}
+.docs-injected .doc-code-inline {
+  @apply bg-neutral-900 text-neutral-300 border border-neutral-800 px-2 py-0.5 rounded text-[13px] font-mono transition-colors;
+}
+.docs-injected .doc-link:hover .doc-code-inline {
+  @apply border-neutral-600 text-white bg-neutral-800;
+}
+.docs-injected .doc-pre-wrap {
+  @apply rounded-xl border border-neutral-800 bg-[#0a0a0a] overflow-hidden my-6 p-4 overflow-x-auto relative;
+}
+.docs-injected .doc-pre {
+  @apply text-sm font-mono leading-relaxed text-neutral-300;
+}
+.docs-injected .copy-btn {
+  @apply absolute top-3 right-3 p-2 text-xs rounded-lg bg-neutral-800/80 text-neutral-400 transition-all duration-200 opacity-0;
+}
+.docs-injected .doc-pre-wrap:hover .copy-btn {
+  @apply opacity-100 hover:text-white hover:bg-neutral-700;
+}
+.docs-injected .docs-pager {
+  @apply grid grid-cols-2 gap-4 mt-16 pt-8 border-t border-neutral-800/50;
+}
+.docs-injected .docs-pager-link {
+  @apply flex flex-col p-4 rounded-xl border border-neutral-800 bg-[#111] transition-all hover:bg-neutral-900 hover:border-neutral-600 relative overflow-hidden;
+}
+.docs-injected .docs-pager-prev {
+  @apply items-start;
+}
+.docs-injected .docs-pager-next {
+  @apply items-end col-start-2;
+}
+.docs-injected .docs-pager-link-label {
+  @apply text-xs text-neutral-500 uppercase tracking-widest mb-2 font-mono;
+}
+.docs-injected .docs-pager-link-title {
+  @apply text-white font-medium flex items-center gap-2 transition-colors text-lg;
+}
+.docs-injected .docs-pager-link:hover .docs-pager-link-title {
+  @apply text-[#ccff00];
+}
+.docs-injected aside,
+.docs-injected .right-sidebar,
+.docs-injected .docs-right-sidebar {
+  display: none !important;
+}
+
+/* ─── Reset & Base ─── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #262626 #000000;
+}
+
+body {
+  background: #000000;
+  color: #ffffff;
+  font-family: 'Inter', 'Geist Sans', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ─── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* ─── Grid Background Pattern ─── */
+.bg-grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ─── Selection ─── */
+::selection {
+  background: rgba(168, 230, 0, 0.25);
+  color: #ffffff;
+}
+
+/* ─── Gradient Radial Utility ─── */
+.bg-gradient-radial {
+  background: radial-gradient(circle, var(--tw-gradient-stops));
+}
+
+/* ─── Animations ─── */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 0 20px rgba(168, 230, 0, 0.08); }
+  50% { box-shadow: 0 0 40px rgba(168, 230, 0, 0.18); }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ─── Animation Utilities ─── */
+.animate-fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.animate-float-delayed {
+  animation: float 6s ease-in-out 3s infinite;
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee-reverse {
+  animation: marquee 30s linear infinite reverse;
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 3s ease-in-out infinite;
+}
+
+.animate-slide-up {
+  opacity: 0;
+  animation: slideUp 0.6s ease-out forwards;
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* ─── Utility Overrides ─── */
+.text-neon {
+  color: #a8e600;
+}
+
+.bg-neon {
+  background-color: #a8e600;
+}
+
+.border-neon {
+  border-color: #a8e600;
+}
+
+/* ─── Focus States ─── */
+*:focus-visible {
+  outline: 2px solid #a8e600;
+  outline-offset: 2px;
+}
+
+/* ─── Code Block Styling ─── */
+pre {
+  tab-size: 2;
+}
+
+code {
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+}
