@@ -43,7 +43,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <meta name="virtual-protocol-site-verification" content="d9f90808c9c148c4fc5b422d241cc177" />
+        <meta name="virtual-protocol-site-verification" content="1bff9ea0a8c1e7efde45328663fbadfc" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"

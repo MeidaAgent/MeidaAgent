@@ -390,7 +390,7 @@ export default function ChatDrawer({ isOpen, onClose }) {
                   {m.role === 'user' ? 'USER' : 'MEIDA'}
                 </span>
                 <div 
-                  className={`text-white p-4 max-w-[85%] whitespace-pre-wrap ${
+                  className={`text-white p-4 max-w-[85%] whitespace-pre-wrap break-words ${
                     m.role === 'user' 
                       ? 'bg-white/10 border border-white/5 rounded-2xl rounded-tr-sm' 
                       : 'bg-neon/10 border border-neon/20 rounded-2xl rounded-tl-sm shadow-[0_0_15px_rgba(204,255,0,0.05)]'

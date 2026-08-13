@@ -39,3 +39,6 @@ app/api/
 MEIDA_CONTEXT.md
 deploy_to_cpanel/
 
+
+.vercel
+.env*
